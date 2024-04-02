@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture - Website</title>
+
+    <meta name="title" content="furniture" />
+    <meta name="description" content="This is the website" />
+    <meta name="keyword" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <!-- Meta Facebook -->
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="furniture" />
+    <meta property="og:description" content="This is luxstate website" />
+    <meta property="og:image" content="#" />
+
+    <!-- Meta Twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- Link 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+
+    <!-- LInk JS -->
+    <script type="module" src="/js/main.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="./" class="header__logo">
+                <img srcset="./img/logo.png 2x" alt="logo-furniture" class="header__logo-img">
+            </a>
+            <ul class="header__menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Agents</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="header__cta">
+                <a href="#" class="btnmain">437-990-1234</a>
+                <a href="#" class="btnmain --yellow">Shopping Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero-->
+        <section class="hero">
+            <picture class="hero__img">
+                <img src="./img/HERO.png" alt="">
+            </picture>
+        </section>
+        <!--Products-->
+        <section class="products">
+            <div class="container">
+                <div class="textbox">
+                    <h2 class="heading --h2">More Then 500+ <br> Furniture</h2>
+                </div>
+                <div class="products__list">
+                    <figure class="products__list-item">
+                        <model-viewer src="./Assets/Avona.glb" ar ar-modes="scene-viewer webxr quick-look"
+                            camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.15"
+                            exposure="0.77" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 93deg auto">
+                            <button class="Hotspot" slot="hotspot-1"
+                                data-position="-0.5657744676804706m 0.9368043323487077m 0.15429858203962876m"
+                                data-normal="0.7441163627068935m 0.6664065015983528m 0.0468317560989083m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">TOP</div>
+                            </button><button class="Hotspot" slot="hotspot-2"
+                                data-position="-0.37341464236476196m 0.3617777535737562m 0.7435979171197968m"
+                                data-normal="0.07929096188746923m 0.1593893529429409m 0.9840264109928101m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">SIDE</div>
+                            </button>
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                            <button slot="ar-button" id="ar-button">
+                                View in your space
+                            </button>
+                        </model-viewer>
+
+                        <div class="content">
+                            <h3 class="title"><a href="#">AVONA</a></h3>
+                            <div class="bottom">
+                                <p class="bottom__text">$350</p>
+                                <div class="info">
+                                    <span class="info__item-text">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <figure class="products__list-item">
+                        <model-viewer src="./Assets/Picard.glb" ar ar-modes="scene-viewer webxr quick-look"
+                            camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.15"
+                            exposure="0.77" min-camera-orbit="auto 0deg 3.037m" max-camera-orbit="auto 85deg auto"
+                            min-field-of-view="30deg">
+                            <button class="Hotspot" slot="hotspot-2"
+                                data-position="0.2379952967343817m 0.873929460626734m -0.1338128527420981m"
+                                data-normal="-0.10153432233689236m 0.9850831421058409m 0.13893158217796153m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">TOP</div>
+                            </button><button class="Hotspot" slot="hotspot-3"
+                                data-position="0.350069586368132m 0.3845264326699352m 0.19131723333501283m"
+                                data-normal="0.6296584001756602m -0.1259951691052926m 0.7665869268715432m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">SIDE</div>
+                            </button>
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                            <button slot="ar-button" id="ar-button">
+                                View in your space
+                            </button>
+                        </model-viewer>
+
+
+
+                        <div class="content">
+                            <h3 class="title"><a href="#">PICARD</a></h3>
+                            <div class="bottom">
+                                <p class="bottom__text">$250</p>
+                                <div class="info">
+                                    <span class="info__item-text">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+                    <figure class="products__list-item">
+                        <model-viewer src="./Assets/Oba.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls
+                            tone-mapping="commerce" poster="poster.webp" shadow-intensity="0.95" exposure="1.02"
+                            shadow-softness="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto">
+                            <button class="Hotspot" slot="hotspot-1"
+                                data-position="-0.5442682204651096m 0.6096866257841413m -0.16935150379630814m"
+                                data-normal="-0.14312953407684226m 0.10424962898204361m 0.9841981260559545m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">LEFT</div>
+                            </button><button class="Hotspot" slot="hotspot-2"
+                                data-position="0.5902918753983496m 0.9288791545760418m 0.3964901528235666m"
+                                data-normal="0.9785381548870168m -0.17088831181919067m 0.11515322103137111m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">BACK</div>
+                            </button>
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                            <button slot="ar-button" id="ar-button">
+                                View in your space
+                            </button>
+                        </model-viewer>
+
+                        <div class="content">
+                            <h3 class="title"><a href="#">OBA</a></h3>
+                            <div class="bottom">
+                                <p class="bottom__text">$450</p>
+                                <div class="info">
+                                    <span class="info__item-text">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+                </div>
+                <a href="#" target="_blank" class="btnwhite">View All Products</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <h2 class="footer__top-text">Furniture<br>Luxury furniture in Toronto</h2>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer_bottom-left">
+                    <a href="./" class="logo"><img srcset="./img/logo-white.png" alt="logo-furniture"></a>
+                    <p class="copyright"> © 2024 - Thuy Diem Ha Pham,<br> All Right Reserved</p>
+                </div>
+                <div class="content">
+                    <div class="content-item">
+                        <p class="label">Home</p>
+                        <ul>
+                            <li><a href="#">Agents</a></li>
+                            <li><a href="#">Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <p class="label">COMPANY</p>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Social</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <p class="label">PRODUCTS</p>
+                        <ul>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">How It Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <p class="label">SERVICES</p>
+                        <ul>
+                            <li><a href="#">Renting</a></li>
+                            <li><a href="#">Selling</a></li>
+                            <li><a href="#">Customizing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
