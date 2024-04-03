@@ -11,33 +11,13 @@
     <meta name="keyword" content="" />
     <meta name="author" content="" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-
-    <!-- Meta Facebook -->
-
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="furniture" />
-    <meta property="og:description" content="This is luxstate website" />
-    <meta property="og:image" content="#" />
-
-    <!-- Meta Twitter -->
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:card" content="" />
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <!-- Link 3D -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-
-    <!-- LInk JS -->
-    <script type="module" src="/js/main.js"></script>
 
 </head>
 
@@ -45,13 +25,11 @@
     <header class="header">
         <div class="container">
             <a href="./" class="header__logo">
-                <img srcset="./img/logo.png 2x" alt="logo-furniture" class="header__logo-img">
+                <img srcset="./img/logo.png" alt="logo-furniture" class="header__logo-img">
             </a>
             <ul class="header__menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
-                <li><a href="#">How It Works</a></li>
-                <li><a href="#">Agents</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <div class="header__cta">
@@ -73,23 +51,31 @@
         <section class="products">
             <div class="container">
                 <div class="textbox">
-                    <h2 class="heading --h2">More Then 500+ <br> Furniture</h2>
+                    <h2 class="heading --h2">More Than 500+ <br> Furniture</h2>
                 </div>
                 <div class="products__list">
-                    <figure class="products__list-item">
-                        <model-viewer src="./Assets/Avona.glb" ar ar-modes="scene-viewer webxr quick-look"
-                            camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.15"
-                            exposure="0.77" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 93deg auto">
+                    <div class="products__list-item">
+
+                        <!--  Model-->
+                        <model-viewer id="Avona-viewer" src="./Assets/Avona.glb" ar
+                            ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="commerce"
+                            poster="poster.webp" shadow-intensity="1" min-camera-orbit="auto 0deg auto"
+                            max-camera-orbit="auto 79deg auto">
                             <button class="Hotspot" slot="hotspot-1"
-                                data-position="-0.5657744676804706m 0.9368043323487077m 0.15429858203962876m"
-                                data-normal="0.7441163627068935m 0.6664065015983528m 0.0468317560989083m"
-                                data-visibility-attribute="visible">
-                                <div class="HotspotAnnotation">TOP</div>
-                            </button><button class="Hotspot" slot="hotspot-2"
-                                data-position="-0.37341464236476196m 0.3617777535737562m 0.7435979171197968m"
-                                data-normal="0.07929096188746923m 0.1593893529429409m 0.9840264109928101m"
+                                data-position="-0.37030576359982437m 0.3234277009132479m 0.7462941529061764m"
+                                data-normal="0.10178072063432517m 0.05880354997785969m 0.9930673831201783m"
                                 data-visibility-attribute="visible">
                                 <div class="HotspotAnnotation">SIDE</div>
+                            </button><button class="Hotspot" slot="hotspot-2"
+                                data-position="0.3003710358888141m 0.37395256513602404m 0.36070264104255756m"
+                                data-normal="0.9031492526081003m 0.4273507398869032m 0.04114331818832904m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">FRONT</div>
+                            </button><button class="Hotspot" slot="hotspot-3"
+                                data-position="-0.2993488892831664m 0.37250085354741747m -0.16148869346794514m"
+                                data-normal="0.1753468904725342m 0.22910294497051215m -0.9574786204440554m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">RIGHT</div>
                             </button>
                             <div class="progress-bar hide" slot="progress-bar">
                                 <div class="update-bar"></div>
@@ -97,74 +83,93 @@
                             <button slot="ar-button" id="ar-button">
                                 View in your space
                             </button>
-                            <div id="ar-prompt">
-                                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-                            </div>
                         </model-viewer>
 
+                        <!-- Description -->
                         <div class="content">
-                            <h3 class="title"><a href="#">AVONA</a></h3>
+                            <h3 class="title">AVONA</h3>
                             <div class="bottom">
-                                <p class="bottom__text">$350</p>
                                 <div class="info">
-                                    <span class="info__item-text">Available</span>
+                                    <!-- Camera buttons -->
+                                    <div class="camera-controls">
+                                        <button data-model="Avona" data-view="left">Left View</button>
+                                        <button data-model="Avona" data-view="front">Front View</button>
+                                        <button data-model="Avona" data-view="right">Right View</button>
+                                        <button data-model="Avona" data-view="reset">Reset View</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </figure>
 
-                    <figure class="products__list-item">
-                        <model-viewer src="./Assets/Picard.glb" ar ar-modes="scene-viewer webxr quick-look"
-                            camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1.15"
-                            exposure="0.77" min-camera-orbit="auto 0deg 3.037m" max-camera-orbit="auto 85deg auto"
-                            min-field-of-view="30deg">
-                            <button class="Hotspot" slot="hotspot-2"
-                                data-position="0.2379952967343817m 0.873929460626734m -0.1338128527420981m"
-                                data-normal="-0.10153432233689236m 0.9850831421058409m 0.13893158217796153m"
+                    </div>
+
+                    <div class="products__list-item">
+                        <model-viewer id="Picard-viewer" src="./Assets/Picard.glb" ar
+                            ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="commerce"
+                            poster="poster.webp" shadow-intensity="1" camera-orbit="-122deg 76.39deg 3.037m"
+                            field-of-view="30deg" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 87deg auto"
+                            camera-target="-0.06m 0.44m -0.02m">
+                            <button class="Hotspot" slot="hotspot-1"
+                                data-position="-0.43675251927053926m 0.5062672002081783m -0.1352904770261567m"
+                                data-normal="-0.6106850600464581m -0.11177078142629783m -0.7839458207398063m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">Left</div>
+                            </button><button class="Hotspot" slot="hotspot-2"
+                                data-position="0.13200246331729693m 0.8606806098522939m -0.19206809805946m"
+                                data-normal="-0.6044752798223463m 0.5798832403571739m 0.5462097249560467m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">Top</div>
+                            </button><button class="Hotspot" slot="hotspot-3"
+                                data-position="-0.23210200987300889m 0.46075602288557205m 0.33883568025031396m"
+                                data-normal="-0.6701863180742361m 0.5540106823188022m 0.4938850705809541m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">Front</div>
+                            </button>
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                            <button slot="ar-button" id="ar-button">
+                                View in your space
+                            </button>
+                        </model-viewer>
+
+
+                        <!-- Description -->
+                        <div class="content">
+                            <h3 class="title">Picard</h3>
+                            <div class="bottom">
+                                <div class="info">
+                                    <!-- Camera buttons -->
+                                    <div class="camera-controls">
+                                        <button data-model="Picard" data-view="top">Top View</button>
+                                        <button data-model="Picard" data-view="front">Front View</button>
+                                        <button data-model="Picard" data-view="side">Side View</button>
+                                        <button data-model="Picard" data-view="reset">Reset View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="products__list-item">
+                        <model-viewer id="Oba-viewer" src="./Assets/Oba.glb" ar ar-modes="scene-viewer webxr quick-look"
+                            camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1"
+                            camera-orbit="268deg 79.5deg 4.296m" field-of-view="30deg" min-camera-orbit="auto 0deg auto"
+                            max-camera-orbit="auto 80deg auto">
+                            <button class="Hotspot" slot="hotspot-1"
+                                data-position="-0.3951358529350703m 0.38715681408494285m 0.2650683894459573m"
+                                data-normal="-0.8018864954658793m -0.04784297451216052m 0.5955578042300171m"
+                                data-visibility-attribute="visible">
+                                <div class="HotspotAnnotation">FRONT</div>
+                            </button><button class="Hotspot" slot="hotspot-2"
+                                data-position="0.3337151763053336m 1.5286160399449042m -0.17885371576571274m"
+                                data-normal="-0.3028506510232632m 0.552263025479394m 0.7767155424369542m"
                                 data-visibility-attribute="visible">
                                 <div class="HotspotAnnotation">TOP</div>
                             </button><button class="Hotspot" slot="hotspot-3"
-                                data-position="0.350069586368132m 0.3845264326699352m 0.19131723333501283m"
-                                data-normal="0.6296584001756602m -0.1259951691052926m 0.7665869268715432m"
-                                data-visibility-attribute="visible">
-                                <div class="HotspotAnnotation">SIDE</div>
-                            </button>
-                            <div class="progress-bar hide" slot="progress-bar">
-                                <div class="update-bar"></div>
-                            </div>
-                            <button slot="ar-button" id="ar-button">
-                                View in your space
-                            </button>
-                            <div id="ar-prompt">
-                                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-                            </div>
-                        </model-viewer>
-
-
-
-                        <div class="content">
-                            <h3 class="title"><a href="#">PICARD</a></h3>
-                            <div class="bottom">
-                                <p class="bottom__text">$250</p>
-                                <div class="info">
-                                    <span class="info__item-text">Available</span>
-                                </div>
-                            </div>
-                        </div>
-                    </figure>
-
-                    <figure class="products__list-item">
-                        <model-viewer src="./Assets/Oba.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls
-                            tone-mapping="commerce" poster="poster.webp" shadow-intensity="0.95" exposure="1.02"
-                            shadow-softness="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto">
-                            <button class="Hotspot" slot="hotspot-1"
-                                data-position="-0.5442682204651096m 0.6096866257841413m -0.16935150379630814m"
-                                data-normal="-0.14312953407684226m 0.10424962898204361m 0.9841981260559545m"
-                                data-visibility-attribute="visible">
-                                <div class="HotspotAnnotation">LEFT</div>
-                            </button><button class="Hotspot" slot="hotspot-2"
-                                data-position="0.5902918753983496m 0.9288791545760418m 0.3964901528235666m"
-                                data-normal="0.9785381548870168m -0.17088831181919067m 0.11515322103137111m"
+                                data-position="0.4585324340120318m 0.7827704398441715m 0.6002120982233226m"
+                                data-normal="0.748379593335878m -0.1838466147877331m 0.6372820462789744m"
                                 data-visibility-attribute="visible">
                                 <div class="HotspotAnnotation">BACK</div>
                             </button>
@@ -174,24 +179,25 @@
                             <button slot="ar-button" id="ar-button">
                                 View in your space
                             </button>
-                            <div id="ar-prompt">
-                                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-                            </div>
                         </model-viewer>
 
+                        <!-- Description -->
                         <div class="content">
-                            <h3 class="title"><a href="#">OBA</a></h3>
+                            <h3 class="title">Oba</h3>
                             <div class="bottom">
-                                <p class="bottom__text">$450</p>
                                 <div class="info">
-                                    <span class="info__item-text">Available</span>
+                                    <!-- Camera buttons -->
+                                    <div class="camera-controls">
+                                        <button data-model="Oba" data-view="top">Top View</button>
+                                        <button data-model="Oba" data-view="front">Front View</button>
+                                        <button data-model="Oba" data-view="back">Back View</button>
+                                        <button data-model="Oba" data-view="reset">Reset View</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </figure>
-
+                    </div>
                 </div>
-                <a href="#" target="_blank" class="btnwhite">View All Products</a>
             </div>
         </section>
 
@@ -203,7 +209,6 @@
             </div>
             <div class="footer__bottom">
                 <div class="footer_bottom-left">
-                    <a href="./" class="logo"><img srcset="./img/logo-white.png" alt="logo-furniture"></a>
                     <p class="copyright"> © 2024 - Thuy Diem Ha Pham,<br> All Right Reserved</p>
                 </div>
                 <div class="content">
@@ -243,6 +248,84 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resetModel = (modelId) => {
+                const modelViewer = document.getElementById(`${modelId}-viewer`);
+                switch (modelId) {
+                    case 'Avona':
+                        modelViewer.cameraOrbit = 'auto';
+                        break;
+                    case 'Picard':
+                        modelViewer.cameraOrbit = '-122deg 76.39deg 3.037m';
+                        break;
+                    case 'Oba':
+                        modelViewer.cameraOrbit = '-101.8deg 84.49deg 4.296m';
+                        break;
+                    default:
+                        modelViewer.cameraOrbit = 'auto';
+                        break;
+                }
+            };
+
+
+            const changeView = (modelId, view) => {
+                const modelViewer = document.getElementById(`${modelId}-viewer`);
+                switch (view) {
+                    case 'left':
+                        modelViewer.cameraOrbit = '0deg 90deg 2.5m';
+                        break;
+                    case 'top':
+                        modelViewer.cameraOrbit = '0deg 0deg 1m';
+                        break;
+                    case 'front':
+                        switch (modelId) {
+                            case 'Avona':
+                                modelViewer.cameraOrbit = '90deg 180deg 3m';
+                                break;
+                            case 'Picard':
+                                modelViewer.cameraOrbit = '-40deg 90deg 2.5m';
+                                break;
+                            case 'Oba':
+                                modelViewer.cameraOrbit = '-30deg 100deg 3.5m';
+                                break;
+                            default:
+                                modelViewer.cameraOrbit = '90deg 180deg 3m';
+                                break;
+                        }
+                        break;
+                    case 'right':
+                        modelViewer.cameraOrbit = '180deg 75deg 2.5m';
+                        break;
+                    case 'side':
+                        modelViewer.cameraOrbit = '180deg 75deg 2.5m';
+                        break;
+                    case 'back':
+                        modelViewer.cameraOrbit = '180deg 75deg 2.5m';
+                        break;
+                    case 'reset':
+                        resetModel(modelId); // Reset the model to its initial state
+                        break;
+                }
+            };
+
+
+
+            const buttons = document.querySelectorAll('.camera-controls button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modelId = button.dataset.model;
+                    const view = button.dataset.view || 'reset';
+                    changeView(modelId, view);
+                });
+            });
+        });
+
+
+    </script>
+
+
 </body>
 
 </html>
